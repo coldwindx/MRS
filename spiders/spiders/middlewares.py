@@ -8,8 +8,8 @@ class AgentMiddleware(UserAgentMiddleware):
     def from_crawler(cls, crawler):
         return cls(user_agent=crawler.settings.get('USER_AGENTS'))
     def process_request(self, request, spider):
-        agent = random.choice(self.user_agent)
-        request.headers['User-Agent'] = agent
+        # agent = random.choice(self.user_agent)
+        request.headers['User-Agent'] = self.user_agent
 
 class ProxyMiddleware(UserAgentMiddleware):
     def __init__(self, ip):

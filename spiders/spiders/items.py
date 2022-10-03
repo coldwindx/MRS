@@ -8,3 +8,6 @@ class Movie(scrapy.Item):
     forms = scrapy.Field()      # 类型
     score = scrapy.Field()      # 评分
 
+class Link(scrapy.Item):
+    '''浏览器页面上其他电影链接'''
+    url = scrapy.Field()

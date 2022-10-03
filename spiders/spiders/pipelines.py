@@ -10,6 +10,20 @@ class MoviePipeline(object):
     def __init__(self) -> None:
         self.f = open('/Users/zhulin/workspace/MRS/datasets/movies.json', 'w')
     def process_item(self, item, spider):
+        if spider.name != 'movie':
+            return item
+        content = json.dumps(dict(item), ensure_ascii=False, cls=Encoder) + ",\n"
+        self.f.write(content)
+        return item
+    def close(self, spider):
+        self.f.close
+
+class LinkPipeline(object):
+    def __init__(self) -> None:
+        self.f = open('/Users/zhulin/workspace/MRS/datasets/link.json', 'w')
+    def process_item(self, item, spider):
+        if spider.name != 'link':
+            return item
         content = json.dumps(dict(item), ensure_ascii=False, cls=Encoder) + ",\n"
         self.f.write(content)
         return item
