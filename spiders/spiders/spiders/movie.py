@@ -6,6 +6,16 @@ class MovieSpider(scrapy.Spider):
     name = 'movie'
     start_urls = ['https://movie.douban.com/subject/26752088/']
 
+    # def start_requests(self):
+    #     '''用于生成爬虫访问请求'''
+    #     data={'ch':'photography','listtype':'new'}
+    #     base_url='https://image.so.com/zj?'
+    #     for page in range(1,self.settings.get('MAX_PAGE')+1):
+    #         data['sn']=page*30
+    #         params=urlencode(data)
+    #         url=base_url+params
+    #         yield Request(url=url,callback=self.parse)
+
     def parse(self, response):
         site = response.xpath('//div[@id="content"]') 
         infos = site.xpath('//div[@id="info"]')

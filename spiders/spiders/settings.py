@@ -22,9 +22,10 @@ ROBOTSTXT_OBEY = True  # 默认为True，过滤不规范的url
 ITEM_PIPELINES = {
     'spiders.pipelines.MoviePipeline': 300, 
     'spiders.pipelines.LinkPipeline': 301,
+    'spiders.pipelines.CommentPipeline': 302,
 }
 # 爬取间隔时间
-DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 15
 # User Agent池
 USER_AGENTS = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.3 Safari/605.1.15"
 # 下载中间件
