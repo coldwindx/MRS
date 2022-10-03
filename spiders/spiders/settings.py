@@ -25,7 +25,7 @@ ITEM_PIPELINES = {
     'spiders.pipelines.CommentPipeline': 302,
 }
 # 爬取间隔时间
-DOWNLOAD_DELAY = 15
+DOWNLOAD_DELAY = 30
 # User Agent池
 USER_AGENTS = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.3 Safari/605.1.15"
 # 下载中间件

@@ -11,7 +11,7 @@ class CommentSpider(scrapy.Spider):
         '''用于生成爬虫访问请求'''
         start, limit = 0, 20
         base_url = 'https://movie.douban.com/subject/{}/comments?start={}&limit={}&status=P&sort=new_score'
-        for i in range(20):
+        for _ in range(20):
             url = base_url.format('26752088', start, limit)
             yield Request(url=url,callback=self.parse)
             start += 20
