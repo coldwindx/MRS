@@ -8,7 +8,7 @@ class Encoder(json.JSONEncoder):
 
 class Pipeline(object):
     def __init__(self) -> None:
-        self.f = open('E:/workspace/MRS/datasets/movies.json', 'w')
+        self.f = open('/Users/zhulin/workspace/MRS/datasets/movies.json', 'w')
     def process(self, item, spider):
         content = json.dumps(dict(item), ensure_ascii=False, cls=Encoder) + ",\n"
         self.f.write(content)

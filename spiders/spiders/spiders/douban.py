@@ -9,6 +9,8 @@ class DoubanSpider(scrapy.Spider):
     def parse(self, response):
         sites = response.xpath('//div[@id="content"]') 
         for i in sites:
+            print(i)
             item = Movie() 
             item['name'] = i.xpath('h1/span[1]/text()').extract()
+
             yield item

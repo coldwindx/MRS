@@ -26,36 +26,32 @@ ITEM_PIPELINES = {
 DOWNLOAD_DELAY = 3
 # User Agent池
 USER_AGENTS = [
-    "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
-    "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Acoo Browser; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506)",
-    "Mozilla/4.0 (compatible; MSIE 7.0; AOL 9.5; AOLBuild 4337.35; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.3 Safari/605.1.15"
 ]
 # 下载中间件
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None, 
     'spiders.middlewares.AgentMiddleware': 400,
-    'spiders.middlewares.ProxyMiddleware': 543
+    # 'spiders.middlewares.ProxyMiddleware': 543
 }
-# IP池
-Ips=[
-    'http://183.237.45.34:9091',
-    'http://120.26.37.240:8000',
-    'http://183.233.169.226:9091',
-    'http://118.212.152.82:9091',
-    'http://101.132.100.26:80',
-    'http://39.130.150.43:80',
-    'http://223.68.190.136:9091',
-    'http://111.85.159.65:9091',
-    'http://60.214.128.150:9091',
-    'http://218.202.7.125:80',
-    'http://118.119.238.91:9080',
-    'http://218.75.38.154:9091',
-    'http://175.6.185.156:9128',
-    'http://183.129.190.172:9091',
-    'http://112.6.117.178:8085',
-    'http://183.224.41.199:80',
-    'http://58.246.58.150:9002',
-    'http://139.9.64.238:443',
-    'http://120.237.144.200:9091',
-    'http://47.107.150.251:80'
+# IP池 WTF:大写可以，小写不可以？
+# http://ip.yqie.com/ipproxy.htm
+IPS=[
+'http://47.101.44.122:80',
+'http://116.63.93.172:8081',
+'http://42.180.208.43:8070',
+'http://60.255.151.82:8',
+'http://218.2.214.107:80',
+'http://116.117.134.135:9999',
+'http://202.108.22.5:80',
+'http://45.64.22.24:80',
+'http://180.97.34.35:80',
+'http://112.80.248.73:80',
+'http://116.117.134.135:8828',
+'http://47.92.234.75:80',
+'http://203.74.120.79:3128',
+'http://60.255.151.81:80',
+'http://39.106.223.134:80',
+'http://222.74.202.229:80',
+'http://58.240.52.114:80'
 ]
