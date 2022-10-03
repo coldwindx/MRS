@@ -7,6 +7,7 @@ class Encoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 
 class MoviePipeline(object):
+    '''豆瓣电影数据存储pipeline'''
     def __init__(self) -> None:
         self.f = open('/Users/zhulin/workspace/MRS/datasets/movies.json', 'w')
     def process_item(self, item, spider):
@@ -19,6 +20,7 @@ class MoviePipeline(object):
         self.f.close
 
 class LinkPipeline(object):
+    '''页面子链接存储pipeline'''
     def __init__(self) -> None:
         self.f = open('/Users/zhulin/workspace/MRS/datasets/link.json', 'w')
     def process_item(self, item, spider):

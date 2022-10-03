@@ -10,4 +10,5 @@ class Movie(scrapy.Item):
 
 class Link(scrapy.Item):
     '''浏览器页面上其他电影链接'''
-    url = scrapy.Field()
+    name = scrapy.Field()
+    urls = scrapy.Field()
