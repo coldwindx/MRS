@@ -20,7 +20,7 @@ NEWSPIDER_MODULE = 'spiders.spiders'
 ROBOTSTXT_OBEY = False  # 默认为True，过滤不规范的url
 # 管道
 ITEM_PIPELINES = {
-    'spiders.pipelines.Pipeline': 300, 
+    'spiders.pipelines.MoviePipeline': 300, 
 }
 # 爬取间隔时间
 DOWNLOAD_DELAY = 3
